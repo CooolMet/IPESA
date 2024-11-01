@@ -1,0 +1,234 @@
+:root {
+    --background-color:  radial-gradient(circle, rgba(249,9,9,1) 0%, rgba(187,142,151,1) 100%);
+    --background-foter:  linear-gradient(0deg, rgba(250,251,251,1) 0%, rgba(184,184,184,1) 100%);
+    --fuentePrincipal: "Capriola", sans-serif;
+    --fuentePrincipalTamano: 400;
+    --fuentePrincipalTipo: normal;
+
+    --fuentefooter: "Italiana", sans-serif;
+    --fuentefooterTamano: 400;
+    --fuentefooterTipo: normal;
+
+    --fuentenombre: "Rubik Moonrocks", sans-serif;
+    --fuentenombreTamano: 400;
+    --fuentenombreTipo: normal;
+
+    --fuentedatos: "Prociono", serif;
+    --fuentedatosTamano: 400;
+    --fuentedatosTipo: normal;
+
+    --fuenteFooter2: "Blinker", sans-serif;
+}
+
+body{
+    background: var(--background-color);
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+
+.header{
+  background-image: url('../img/logg.svg');
+  background-color: aliceblue;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 0px 0px 25px 25px;
+  width: 100%;
+  height: 10rem;
+}
+
+.card_Principal{
+    background-color: rgb(254, 255, 255);
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 23rem;
+    height: 40rem;
+    border-radius: 47px;
+    background: linear-gradient(145deg, #f0f0f0, #cacaca);
+    box-shadow:  15px 15px 30px #d3d3d3, -15px -15px 30px #ededed;
+}
+
+.card_Principal img {
+    background: #316ff6;
+    margin: -90px 0 0 0;
+    width: 14rem;
+    position: absolute;
+    left: 4rem;
+    border-radius: 138px 39px 147px 40px;
+    -moz-border-radius: 138px 39px 147px 40px;
+    -webkit-border-radius: 138px 39px 147px 40px;
+    border: 5px outset #000000;
+}
+
+.informacion{
+  position: absolute;
+  top: 42%;
+  width: 100%;
+  text-align: center;
+}
+
+.nombre{
+  font-family: var(--fuentenombre);
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.puesto{
+  font-family: var(--fuentedatos);
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.correo{
+  font-family: var(--fuentedatos);
+  font-weight: 400;
+  font-size: 22px;
+}
+
+
+.redes_sociales{
+    position:relative;
+    top: 30.5rem;
+    left: 4rem;;
+}
+
+.social-login-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    -webkit-box-reflect: below 5px linear-gradient(transparent, #00000055);
+  }
+  .social-login-icons svg {
+    width: 40px;
+  }
+  
+  .social-icon-1,
+  .social-icon-1-1,
+  .social-icon-2,
+  .social-icon-2-2,
+  .social-icon-3,
+  .social-icon-3-3,
+  .social-icon-4,
+  .social-icon-4-4 {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    margin: 20px 0 0px 0;
+  }
+  
+  .icon svg {
+    fill: #111;
+  }
+  
+  .socialcontainer {
+    height: 80px;
+    overflow: hidden;
+  }
+  .social-icon-1 {
+    transition-duration: 0.4s;
+    background-color: rgb(0, 0, 0);
+    transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
+  }
+  .social-icon-1 svg,
+  .social-icon-2 svg,
+  .social-icon-3 svg,
+  .social-icon-4 svg {
+    opacity: 0;
+    transition-duration: 0.5s;
+    transition-delay: 0.2s;
+  }
+  .social-icon-1-1 {
+    transition-duration: 0.4s;
+    background-color: rgb(0, 0, 0, 0);
+  }
+  .socialcontainer:hover .social-icon-1 {
+    transform: translateY(-70px);
+  }
+  .socialcontainer:hover .social-icon-1 svg,
+  .socialcontainer:hover .social-icon-2 svg,
+  .socialcontainer:hover .social-icon-3 svg,
+  .socialcontainer:hover .social-icon-4 svg {
+    opacity: 1;
+  }
+  .social-icon-2 {
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
+    background: linear-gradient(
+      72.44deg,
+      #ff7a00 11.92%,
+      #ff0169 51.56%,
+      #d300c5 85.69%
+    );
+  }
+  .socialcontainer:hover .social-icon-2 {
+    transform: translateY(-70px);
+  }
+  .social-icon-3 {
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
+    background: #316ff6;
+  }
+  
+  .socialcontainer:hover .social-icon-3 {
+    transform: translateY(-70px);
+  }
+  .social-icon-4 {
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
+  
+    background: linear-gradient(
+      180deg,
+      rgb(248, 247, 248) 0%,
+      rgb(127, 127, 128) 91%
+    );
+  }
+  
+  .socialcontainer:hover .social-icon-4 {
+    transform: translateY(-70px);
+  }
+
+  .footer{
+    background: var(--background-foter);
+    border-radius: 25px 25px 0px 0px;
+    display: grid;
+    justify-items: center;
+    position: absolute;
+    top: 59rem;
+    width: 100%;
+    height: 8rem;
+  }
+
+  .footer img{
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+.phone{
+  font-family: var(--fuenteFooter2);
+  font-weight: 400;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.map{
+  font-family: var(--fuenteFooter2);
+  font-weight: 400;
+  font-size: 22px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.telefono{
+  display: flex;
+  gap: 0.5rem;
+}
+
+.direccion{
+  display: flex;
+  gap: 0.5rem;
+}
