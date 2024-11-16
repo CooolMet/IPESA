@@ -1,0 +1,83 @@
+:root {
+    --background-color: radial-gradient(circle, rgba(249,9,9,1) 0%, rgba(172,40,66,1) 100%);
+    --fuentePrincipal: "Capriola", sans-serif;
+    --fuentePrincipalTamano: 400;
+    --fuentePrincipalTipo: normal;
+}
+
+body{
+    background: var(--background-color);
+    margin: 0;
+}
+
+
+.navegacion{
+    background: white;
+    display: flex;
+    width: 80%;
+    height: 5rem;
+    position: relative;
+    left: 12%;
+    right: 12%;
+    margin-bottom: 1rem;
+    border-radius: 0px 0px 25px 25px;
+}
+.contenidoPrincipal{
+    display: flex;
+    
+}
+
+.formulario{
+    width: 80%;
+    height: 50rem;
+    background-color: gold;
+}
+
+.formulario_titulo{
+    text-align: center;
+}
+
+.formulario_datos{
+    width: 95%;
+    height: 50%;
+    position: relative;
+    left: 2.5%;
+    right: 2.5%;
+    border-radius: 52px;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow:  11px 11px 27px #747474,
+                -11px -11px 27px #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.tabla_datos{
+    background-color: aqua;
+    width: 100%;
+    height: 10rem;
+    margin-top: 2rem;
+}
+
+.codigo{
+    width: 20%;
+    height: 50rem;
+    background-color: teal;
+}
+
+.codigo_url{
+    background: #747474;
+    position: relative;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.codigo_QR{
+    background: chartreuse;
+    width: 100%;
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
