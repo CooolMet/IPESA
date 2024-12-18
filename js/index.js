@@ -29,39 +29,35 @@ async function ValidarCampos() {
         contrasena.focus();
     }else{
         Mensaje('Los campos tienen informacion', 'success');
-       await Login();
+        Login();
     }
 }
 
-async function Login() {
-    let datos = {};
+function Login() {
     let user = usuario.value;
     let pass = contrasena.value;
     let data = new FormData();
 
-    datos = {
-        'usuario': user,
-        'contrasena': pass,
-    };
+    data.append('usuario', user);
+    data.append('password', pass);
 
-    data.append('datos', JSON.stringify(datos));
-    // formData.append('datos', JSON.stringify(objeto));
+// Enviar los datos a un archivo PHP mediante POST
+fetch('querys/prueba.php', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data) // Convertir el objeto a JSON
+})
+.then(response => response.json()) // Esperar respuesta en formato JSON
+.then(result => {
+    console.log('Respuesta del servidor:', result);
+})
+.catch(error => {
+    console.error('Error:', error);
+});
 
-    try {
-        let response = await fetch('../querys/prueba.php', {
-            method: 'POST',
-            body: data
-        });
 
-        if (response.ok) {
-            let resultado = await response.text(); // Recibir respuesta desde el servidor
-            console.log('Respuesta desde PHP:', resultado);
-        } else {
-            console.error('Error en la respuesta del servidor:', response.statusText);
-        }
-    } catch (error) {
-        Mensaje(error, 'error');
-    }
 }
 
 function Inicio(e) {
