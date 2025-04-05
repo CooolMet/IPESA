@@ -44,23 +44,21 @@ function Login() {
 // Enviar los datos a un archivo PHP mediante POST
 fetch('querys/prueba.php', {
     method: 'POST',
-    headers: {
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(data) // Convertir el objeto a JSON
+    body: data // Convertir el objeto a JSON
 })
-.then(response => response.json()) // Esperar respuesta en formato JSON
+.then(response => response) // Esperar respuesta en formato JSON
 .then(result => {
     console.log('Respuesta del servidor:', result);
 })
 .catch(error => {
     console.error('Error:', error);
 });
-
-
 }
 
 function Inicio(e) {
     e.preventDefault();
     ValidarCampos();
 }
+
+
+console.log('Hola');
